@@ -1,0 +1,82 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="static/css/style.css"/>
+</head>
+<body>
+  <header class="header">
+    <h1>Employee Directory</h1>
+    <div class="search-filter">
+      <input type="text" id="search" placeholder="Search by name or email" />
+      <button id="filter-btn">Filter</button>
+    </div>
+  </header>
+
+  <section class="controls">
+    <label for="sort">Sort: 
+      <select id="sort">
+        <option value="">--Select--</option>
+        <option value="firstName">First Name</option>
+        <option value="department">Department</option>
+      </select>
+    </label>
+
+    <label for="limit">Show: 
+      <select id="limit">
+        <option>10</option>
+        <option>25</option>
+        <option>50</option>
+        <option>100</option>
+      </select>
+    </label>
+
+    <button id="add-btn">Add Employee</button>
+  </section>
+
+  <main id="employee-list"></main>
+
+  <footer>
+    © 2025 Employee Directory App. All rights reserved.
+  </footer>
+
+  <!-- Hidden Add/Edit Form -->
+  <section id="form-section" class="hidden">
+    <form id="employee-form">
+      <h2 id="form-title">Add Employee</h2>
+      <input type="hidden" id="emp-id" />
+
+      <label>First Name:
+        <input type="text" id="first-name" required />
+      </label>
+
+      <label>Last Name:
+        <input type="text" id="last-name" required />
+      </label>
+
+      <label>Email:
+        <input type="email" id="email" required />
+      </label>
+
+      <label>Department:
+        <input type="text" id="department" required />
+      </label>
+
+      <label>Role:
+        <input type="text" id="role" required />
+      </label>
+
+      <div class="form-actions">
+        <button type="submit" id="save-btn">Add</button>
+        <button type="button" id="cancel-btn">Cancel</button>
+      </div>
+    </form>
+  </section>
+
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+</body>
+</html>
